@@ -1,0 +1,130 @@
+:root {
+    --primary: #00ff88;
+    --secondary: #ff006e;
+    --background: #0a0a0a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(10, 10, 10, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-mode {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mode-btn {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background: var(--primary);
+    color: var(--background);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 2rem 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.cell.x {
+    color: var(--primary);
+    text-shadow: 0 0 20px var(--primary);
+}
+
+.cell.o {
+    color: var(--secondary);
+    text-shadow: 0 0 20px var(--secondary);
+}
+
+.winning-cell {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.status {
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.gradient-bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #00ff88, #ff006e, #00ffff);
+    opacity: 0.1;
+    z-index: -2;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

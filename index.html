@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="game-mode">
+            <button class="mode-btn active" data-mode="ai">Tic Tac Toe</button>
+        </div>
+        
+        <div class="board" id="board"></div>
+        <div class="status" id="status">Play against AI!</div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
