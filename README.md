@@ -25,6 +25,6 @@ The AI analyzes the current game board and selects the optimal move using intell
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/tic-tac-toe-ai.git
-cd tic-tac-toe-ai
+git clone https://github.com/ShashankShatraboina/TIC-TAC-TOE-AI.git
+cd TIC-TAC-TOE-AI
 pip install -r requirements.txt
