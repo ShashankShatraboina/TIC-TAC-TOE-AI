@@ -16,8 +16,7 @@ Tic Tac Toe AI is an interactive game application where players can challenge an
 
 ## Technologies Used
 - Python
-- Machine Learning / AI Logic
-- Streamlit / Tkinter / Flask (update based on your project)
+- Machine Learning
 - NumPy
 
 ## How It Works
